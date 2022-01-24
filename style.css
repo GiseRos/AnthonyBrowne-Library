@@ -76,13 +76,13 @@ main h2{
 }
 
 .product{
-    height: 700px;
-    width: 300px;
+    height: 670px;
+    width: 250px;
     border: 2px solid var(--intermediate);
-    margin: 3%;
-    padding: 3%;
+    margin: 2% 1% 2% 2%;
+    padding: 2%;
     display: grid;
-    grid-template-rows: 350px 150px 90px 70px;
+    grid-template-rows: 350px 160px 80px 60px;
 }
 
 .product img{
@@ -121,7 +121,7 @@ h3{
 aside{
     background-color: var(--higher);
     grid-area: aside;
-    width: 350px;
+    width: 550px;
   }
 
   aside h3{
@@ -171,125 +171,104 @@ aside{
   }
 
   /*mediaqueries*/
-@media (min-width: 1200px) {
-    .product{
-    height: 600px;
-    width: 240px;
-    grid-template-rows: 250px 170px 90px 70px;
-    }
-
-    figure img{
-        width: 280px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .product{
-    height: 600px;
-    width: 190px;
-    grid-template-rows: 250px 220px 60px 70px;
-    }
-
-    .product .btn{
-       font-size: 1.2em; 
-    }
-
-    h3{
-        font-size: 1.5em;
-    }
-
-    figure img{
-        width: 280px;
-    }
-}
-
-@media (min-width: 900px) {
-    .containerProducts{
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-    }
-    .product{
-    height: 600px;
-    width: 220px;
-    grid-template-rows: 250px 220px 60px 70px;
-    }
-}
-
-@media (min-width: 768px) {
-    .containerProducts{
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-    }
-    .product{
-    height: 620px;
-    width: 180px;
-    grid-template-rows: 250px 240px 60px 60px;
-    }
-
-    h2, h3{
-        font-size: 1.2em;
-    }
-
-    .product .btn{
-        font-size: 1.1em;
-    }
-
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
     aside{
-    background-color: var(--higher);
-    grid-area: aside;
-    width: 300px;
-  }
-  aside img{
-      width: 230px;
-  }
+        width: 300px;
+    }
+    aside figure img{
+        width: 200px;
+    }
+    .product{
+        height: 600px;
+        width: 215px;
+        grid-template-rows: 250px 220px 60px 60px;
+    }   
+
+     .product .btn{
+        font-size: 1.1em; 
+    }
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+    aside{
+        width: 250px;
+    }
+    aside figure img{
+        width: 200px;
+    }
+    
+    .containerProducts{
+        display: grid;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: auto auto;
+    }
+    
+    .product{
+        height: 600px;
+        width: 220px;
+        grid-template-rows: 250px 220px 60px 60px;
+    }   
+
+     .product .btn{
+        font-size: 1.1em; 
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+   .container{
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "aside aside aside aside"
+        "footer footer footer footer";
+    } 
+
     h1{
         font-size: 1.5em;
     }
-
-    main p, aside p{
-        font-size: 0.8em;
+    
+    main h2, main h3{
+        font-size: 1.3em;
     }
-
+    
     .containerProducts{
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+        display: grid;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: auto auto;
     }
 
     .product{
-    height: 480px;
-    width: 140px;
-    grid-template-rows: 160px 220px 40px 40px;
+        height: 500px;
+        width: 140px;
+        grid-template-rows: 180px 220px 40px 40px;
     }
 
-    main h2, main h3, aside h3{
-        font-size: 1em;
-    }
+    main p{
+        font-size: 0.8em;
+    }   
 
-    .product .btn{
-        font-size: 0.6em;
+     .product .btn{
+        font-size: 0.6em; 
     }
 
     aside{
-    background-color: var(--higher);
-    grid-area: aside;
-    width: 150px;
+        width: 100%;
     }
 
-    aside img{
-      width: 120px;
+    aside figure img{
+        width: 200px;
     }
 
-    aside figcaption{
-        font-size: 1.6em;
+    aside h3, figcaption{
+        font-size: 1.5em;
+    }
+
+    aside p{
+        font-size: 0.8em;
+    }
+    
+    footer{
+        font-size: 0.8em;
     }
 }
-
-
-
-
