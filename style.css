@@ -73,6 +73,7 @@ main h2{
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto auto;
+    align-content: center;
 }
 
 .product{
@@ -189,7 +190,7 @@ aside{
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 900px) {
+@media only screen and (min-width: 720px) and (max-width: 900px) {
     aside{
         width: 250px;
     }
@@ -205,7 +206,7 @@ aside{
     
     .product{
         height: 600px;
-        width: 220px;
+        width: 200px;
         grid-template-rows: 250px 220px 60px 60px;
     }   
 
